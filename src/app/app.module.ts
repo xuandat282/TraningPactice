@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment.development';
-import { TodoPageComponent } from './todos/todo-page/todo-page.component';
-import { TodosModule } from './todos/todos.module';
 import { TodoListModule } from './todo-list/todo-list.module';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
