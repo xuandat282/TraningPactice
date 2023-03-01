@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { TodoService } from '../services/todo.service';
 
 @Component({
@@ -6,13 +6,13 @@ import { TodoService } from '../services/todo.service';
   templateUrl: './todo.component.html',
 })
 export class TodoComponent {
-  @ViewChild("todoInput", { static: false })
-  todoInput!: ElementRef;
-
   constructor(public todoService: TodoService) {}
-
+  title: string = '';
   public onAddTodo(title: string): void {
-    this.todoService.addTodo(title);
+    if (this.title.trim()) {
+      this.todoService.addTodo(title);
+      this.title = '';
+    }
   }
 
   public onCompleteTodo(id: string): void {

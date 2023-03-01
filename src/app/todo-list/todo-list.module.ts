@@ -11,6 +11,8 @@ import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     TodoComponent
@@ -23,7 +25,9 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
     NzCheckboxModule,
     NzIconModule,
     NzTypographyModule,
-    NzGridModule
+    NzGridModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [TodoService, TodoStore, TodoQuery],
   exports:[TodoComponent]

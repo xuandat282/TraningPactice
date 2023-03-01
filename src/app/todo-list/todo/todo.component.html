@@ -4,11 +4,11 @@
       <h1 class="display-6 fw-bold">Todo App</h1>
     </div>
     <div class="p-2">
-      <nz-input-group [nzSuffix]="suffixIconSearch">
-        <input #todoInput type="text" nz-input placeholder="Todo tasks" />
+      <nz-input-group [nzSuffix]="suffixIcon">
+        <input type="text" [(ngModel)]="title" nz-input ng-size="large" placeholder="Todo tasks" />
       </nz-input-group>
-      <ng-template #suffixIconSearch>
-        <span (click)="onAddTodo(todoInput.value)" nz-icon nzType="plus-circle"></span>
+      <ng-template #suffixIcon>
+        <span (click)="onAddTodo(title)" nz-icon nzType="plus-circle"></span>
       </ng-template>
     </div>
     <div class="px-2">
